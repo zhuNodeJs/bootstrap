@@ -42,7 +42,7 @@
     },
     {
       "path": "./dist/css/bootstrap-reboot.rtl.css",
-      "maxSize": "2 kB"
+      "maxSize": "2.1 kB"
     },
     {
       "path": "./dist/css/bootstrap-reboot.rtl.min.css",
@@ -62,7 +62,7 @@
     },
     {
       "path": "./dist/css/bootstrap.rtl.min.css",
-      "maxSize": "21 kB"
+      "maxSize": "21.75 kB"
     },
     {
       "path": "./dist/js/bootstrap.bundle.js",

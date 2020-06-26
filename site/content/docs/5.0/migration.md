@@ -7,6 +7,51 @@ aliases: "/migration/"
 toc: true
 ---
 
+### RTL
+
+#### Sass
+
+Horizontal direction sensitive variables, utilities and mixins are renamed with more logical names — `start` and `end` in lieu of `left` and `right`.
+
+<details>
+<summary class="font-weight-bold">Components</summary>
+
+- Renamed `.dropleft` and `.dropright` to `.dropstart` and `dropend`,
+- Renamed `.dropdown-menu-*-left` and `.dropdown-menu-*-right` to `.dropdown-menu-*-start` and `.dropdown-menu-*-end`,
+- Renamed `.bs-popover-left` and `.bs-popover-right` to `.bs-popover-start` and `.bs-popover-end`,
+- Renamed `.bs-tooltip-left` and `.bs-tooltip-right` to `.bs-tooltip-start` and `.bs-tooltip-end`.
+</details>
+<details>
+<summary class="font-weight-bold">Utilities</summary>
+
+- Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`,
+- Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`,
+- Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`,
+- Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`,
+- Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`,
+- Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+
+Breakpoints specific variants are consequently renamed too (eg. `.text-md-start` replaces `.text-md-left`).
+</details>
+<details>
+<summary class="font-weight-bold">Mixins</summary>
+
+- Renamed `border-left-radius()` and `border-right-radius()` to `border-start-radius()` and `border-end-radius()` — as well as their corner relative variants (eg. `.border-bottom-left-radius` became `.border-bottom-start-radius`).
+- Renamed `caret-left()` and `caret-right()` to `caret-start()` and `caret-end()` — subsequently, the `caret()` mixin now takes `start` and `end` as arguments instead of `left` and `right`.
+</details>
+<details>
+<summary class="font-weight-bold">Variables & misc</summary>
+
+- New `$breadcrumb-divider-flipped` if a different breadcrumb separator is needed in RTL,
+- Renamed `$navbar-brand-margin-right` to `$navbar-brand-margin-end`,
+- Renamed `$pagination-margin-left` to `$pagination-margin-start`,
+- Renamed `$form-check-padding-left` to `$form-check-padding-start`,
+- Renamed `$form-switch-padding-left` to `$form-switch-padding-start`,
+- Renamed `$form-check-inline-margin-right` to `$form-check-inline-margin-end`,
+- Renamed `$form-select-feedback-icon-padding-right` to `$form-select-feedback-icon-padding-end`,
+- Renamed `.carousel-item-left` and `.carousel-item-right` to `.carousel-item-start` and `.carousel-item-end`.
+</details>
+
 ## v5.0.0-alpha3
 
 ### Browser support

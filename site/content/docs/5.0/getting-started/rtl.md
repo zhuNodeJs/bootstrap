@@ -78,7 +78,7 @@ When it comes to [customization]({{< docsref "/customize/sass" >}}), the preferr
 Using [RTLCSS value directives](https://rtlcss.com/learn/usage-guide/value-directives/), you can make a variable output a different value for RTL. For example, to decrease the weight for `$font-weight-bold` throughout the codebase, you may use the `/*rtl: {value}*/` syntax:
 
 {{< highlight scss >}}
-$font-weight-bold: 700 #{/*rtl:600*/} !default;
+$font-weight-bold: 700 #{/* rtl:600 */} !default;
 {{< /highlight >}}
 
 Which would ouput to the following for our default CSS and RTL CSS:
@@ -86,7 +86,7 @@ Which would ouput to the following for our default CSS and RTL CSS:
 {{< highlight css >}}
 /* bootstrap.css */
 dt {
-  font-weight: 700 /*rtl:600*/;
+  font-weight: 700 /* rtl:600 */;
 }
 
 /* bootstrap.rtl.css */
@@ -122,9 +122,9 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 {{< /highlight >}}
 
-## Breadcrumbs
+## The breadcrumb case
 
-The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand new variable, `$breadcrumb-divider-flipped`, which defaults to `$breadcrumb-divider`.
+The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
 
 ## Additional resources
 

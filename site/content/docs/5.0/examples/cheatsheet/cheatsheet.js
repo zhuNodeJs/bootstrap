@@ -31,6 +31,6 @@
     }
   }
 
-  window.addEventListener('DOMContentLoaded', setActiveItem)
+  setActiveItem()
   window.addEventListener('hashchange', setActiveItem)
 })()

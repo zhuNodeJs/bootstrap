@@ -13,6 +13,7 @@ import {
   getElementFromSelector,
   getTransitionDurationFromElement,
   isVisible,
+  isRTL,
   reflow,
   typeCheckConfig
 } from './util/index'
@@ -443,11 +444,11 @@ class Modal {
     const isModalOverflowing =
       this._element.scrollHeight > document.documentElement.clientHeight
 
-    if (!this._isBodyOverflowing && isModalOverflowing) {
+    if ((!this._isBodyOverflowing && isModalOverflowing && !isRTL) || (this._isBodyOverflowing && !isModalOverflowing && isRTL)) {
       this._element.style.paddingLeft = `${this._scrollbarWidth}px`
     }
 
-    if (this._isBodyOverflowing && !isModalOverflowing) {
+    if ((this._isBodyOverflowing && !isModalOverflowing && !isRTL) || (!this._isBodyOverflowing && isModalOverflowing && isRTL)) {
       this._element.style.paddingRight = `${this._scrollbarWidth}px`
     }
   }

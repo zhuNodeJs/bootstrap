@@ -14,6 +14,7 @@ import {
   getTransitionDurationFromElement,
   getUID,
   isElement,
+  isRTL,
   noop,
   typeCheckConfig
 } from './util/index'
@@ -63,9 +64,9 @@ const DefaultType = {
 const AttachmentMap = {
   AUTO: 'auto',
   TOP: 'top',
-  RIGHT: 'right',
+  RIGHT: isRTL ? 'left' : 'right',
   BOTTOM: 'bottom',
-  LEFT: 'left'
+  LEFT: isRTL ? 'right' : 'left'
 }
 
 const Default = {
@@ -486,6 +487,17 @@ class Tooltip {
   }
 
   _addAttachmentClass(attachment) {
+    switch (attachment) {
+      case 'right':
+        attachment = 'end'
+        break
+      case 'left':
+        attachment = 'start'
+        break
+      default:
+        break
+    }
+
     this.getTipElement().classList.add(`${CLASS_PREFIX}-${attachment}`)
   }
 

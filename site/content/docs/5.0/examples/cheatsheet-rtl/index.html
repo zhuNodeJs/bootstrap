@@ -15,7 +15,7 @@ direction: rtl
       <img src="/docs/5.0/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap" loading="lazy">
       ورقة غش
     </h1>
-    <a href="{{< docsref "/examples/cheatsheet" >}}" class="ml-auto link-light" hreflang="en">جدول بيانات LTR</a>
+    <a href="{{< docsref "/examples/cheatsheet" >}}" class="ms-auto link-light" hreflang="en">جدول بيانات LTR</a>
   </div>
 </header>
 <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-3 px-xl-0">
@@ -1026,11 +1026,11 @@ direction: rtl
 
         {{< example show_markup="false" >}}
         <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
-          <div class="dropright">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="droprightMenuButton" data-toggle="dropdown" aria-expanded="false">
-              زر Dropright
+          <div class="dropend">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropendMenuButton" data-toggle="dropdown" aria-expanded="false">
+              زر Dropend
             </button>
-            <ul class="dropdown-menu" aria-labelledby="droprightMenuButton">
+            <ul class="dropdown-menu" aria-labelledby="dropendMenuButton">
               <li><h6 class="dropdown-header">رأس القائمة المنسدلة</h6></li>
               <li><a class="dropdown-item" href="#">عمل</a></li>
               <li><a class="dropdown-item" href="#">عمل آخر</a></li>
@@ -1052,11 +1052,11 @@ direction: rtl
               <li><a class="dropdown-item" href="#">رابط منفصل</a></li>
             </ul>
           </div>
-          <div class="dropleft">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropleftMenuButton" data-toggle="dropdown" aria-expanded="false">
-              زر Dropleft
+          <div class="dropstart">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropstartMenuButton" data-toggle="dropdown" aria-expanded="false">
+              زر Dropstart
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropleftMenuButton">
+            <ul class="dropdown-menu" aria-labelledby="dropstartMenuButton">
               <li><h6 class="dropdown-header">رأس القائمة المنسدلة</h6></li>
               <li><a class="dropdown-item" href="#">عمل</a></li>
               <li><a class="dropdown-item" href="#">عمل آخر</a></li>
@@ -1072,9 +1072,9 @@ direction: rtl
         <div class="btn-group">
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownRightMenuButton" data-toggle="dropdown" aria-expanded="false">
-              قائمة بمحاذاة اليمين
+              قائمة بمحاذاة النهاية
             </button>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownRightMenuButton">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownRightMenuButton">
               <li><h6 class="dropdown-header">رأس القائمة المنسدلة</h6></li>
               <li><a class="dropdown-item" href="#">عمل</a></li>
               <li><a class="dropdown-item" href="#">عمل آخر</a></li>
@@ -1143,6 +1143,9 @@ direction: rtl
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenteredScrollable">
             مشروط قابل للتمرير تتمركز عموديًا
           </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreen">
+            شاشة كاملة
+          </button>
         </div>
         {{< /example >}}
       </div>
@@ -1150,7 +1153,7 @@ direction: rtl
     <article class="my-3" id="navs">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>التنقل</h3>
-        <a class="d-flex align-items-center" hreflang="en" href="{{< docsref "/components/navs" >}}">توثيق</a>
+        <a class="d-flex align-items-center" hreflang="en" href="{{< docsref "/components/navs-tabs" >}}">توثيق</a>
       </div>
 
       <div>
@@ -1219,7 +1222,7 @@ direction: rtl
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
                 </li>
@@ -1258,7 +1261,7 @@ direction: rtl
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
                 </li>
@@ -1364,13 +1367,13 @@ direction: rtl
           انبثاق في الأعلى
         </button>
         <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="يرتبط لفرنسا ذلك تم, ان إعلان أدوات إنطلاق.">
-          انبثاق على اليمين
+          popover في النهاية
         </button>
         <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="يرتبط لفرنسا ذلك تم, ان إعلان أدوات إنطلاق.">
           انبثاق في الأسفل
         </button>
         <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="يرتبط لفرنسا ذلك تم, ان إعلان أدوات إنطلاق.">
-          انبثاق على اليسار
+          popover عند البدء
         </button>
         {{< /example >}}
       </div>
@@ -1511,9 +1514,9 @@ direction: rtl
       <div>
         {{< example show_markup="false" class="tooltip-demo" >}}
         <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="تلميح في الأعلى">تلميح في الأعلى</button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="تلميح على اليمين">تلميح على اليمين</button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="تلميح في النهاية">تلميح في النهاية</button>
         <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="تلميح في الأسفل">تلميح في الأسفل</button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="تلميح على اليسار">تلميح على اليسار</button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="تلميح عند البدء">تلميح عند البدء</button>
         <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>تلميح</em> <u>مع</u> <b>HTML</b>">تلميح مع HTML</button>
         {{< /example >}}
       </div>
@@ -1572,6 +1575,40 @@ direction: rtl
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">قريب</button>
         <button type="button" class="btn btn-primary">احفظ التغييرات</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">مشروط ملء الشاشة</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="قريب"></button>
+      </div>
+      <div class="modal-body">
+        <p>علاقة الشمال والفرنسي لها أن. المحيط الشهيرة البولندي دون أي, لم على مليون الثالث، بالسيطرة, نفس ان واحدة المجتمع والكوري. أي أثره، الأمم دار, مع وسفن وقام سكان انه. كان بهيئة الإمداد هو, بينما تطوير يعادل هذه بل, قد خيار يقوم أعلنت بلا. ما مسرح ٢٠٠٤ عدم, حصدت الصفحة المؤلّفة أخذ هو. هذا عل الدول الفرنسية, معقل مهمّات إذ مدن. تجهيز ألمانيا دار بل.</p>
+        <p>لان تم بسبب مئات الفترة. جهة تنفّس المشترك ٣٠, وباءت اوروبا دنو لم, أم جعل كرسي إختار وبريطانيا. مما رئيس الله الأثناء، ٣٠, الأمم الشتاء البولندي بين في, دول ان حلّت الأوروبيّون. بوابة العصبة البرية هو تحت, أضف أم الجوي أراضي, مدن العظمى قُدُماً ايطاليا، هو. حدى ثم تنفّس كنقطة, أن أما اعتداء واُسدل بالجانب.</p>
+        <p>انتهت اكتوبر واندونيسيا، حين بـ. غير بالرغم التقليدي في, و أما بزمام ا لإنعدام. هو كُلفة وانتهاءً حول. جُل مكّن الصين ان, ترتيب الأجل أوراقهم لها كل.</p>
+        <p>هذا وبعض قِبل من, هو ميناء فهرست قبضتهم يبق. كانت لهيمنة للإتحاد على إذ, بحشد مسرح بها أن. قد ومن الأوضاع اليابان للإتحاد, و قررت المارق عرض, أواخر محاولات بها قد. مايو لهيمنة بريطانيا مدن بل.</p>
+        <p>وفي الثالث، الإثنان من, أم وعلى مهمّات على, بـ فرنسية بولندا، لها. لمّ ان قامت تعديل المدن, ٣٠ لمحاكم المعاهدات إيو. كثيرة أدوات ويكيبيديا و بها, أم جدول العصبة بحث. أساسي معارضة بـ هذه, شيء مسرح واتّجه الشّعبين ٣٠. بينما واحدة إذ لمّ.</p>
+        <p>علاقة الشمال والفرنسي لها أن. المحيط الشهيرة البولندي دون أي, لم على مليون الثالث، بالسيطرة, نفس ان واحدة المجتمع والكوري. أي أثره، الأمم دار, مع وسفن وقام سكان انه. كان بهيئة الإمداد هو, بينما تطوير يعادل هذه بل, قد خيار يقوم أعلنت بلا. ما مسرح ٢٠٠٤ عدم, حصدت الصفحة المؤلّفة أخذ هو. هذا عل الدول الفرنسية, معقل مهمّات إذ مدن. تجهيز ألمانيا دار بل.</p>
+        <p>لان تم بسبب مئات الفترة. جهة تنفّس المشترك ٣٠, وباءت اوروبا دنو لم, أم جعل كرسي إختار وبريطانيا. مما رئيس الله الأثناء، ٣٠, الأمم الشتاء البولندي بين في, دول ان حلّت الأوروبيّون. بوابة العصبة البرية هو تحت, أضف أم الجوي أراضي, مدن العظمى قُدُماً ايطاليا، هو. حدى ثم تنفّس كنقطة, أن أما اعتداء واُسدل بالجانب.</p>
+        <p>انتهت اكتوبر واندونيسيا، حين بـ. غير بالرغم التقليدي في, و أما بزمام ا لإنعدام. هو كُلفة وانتهاءً حول. جُل مكّن الصين ان, ترتيب الأجل أوراقهم لها كل.</p>
+        <p>هذا وبعض قِبل من, هو ميناء فهرست قبضتهم يبق. كانت لهيمنة للإتحاد على إذ, بحشد مسرح بها أن. قد ومن الأوضاع اليابان للإتحاد, و قررت المارق عرض, أواخر محاولات بها قد. مايو لهيمنة بريطانيا مدن بل.</p>
+        <p>وفي الثالث، الإثنان من, أم وعلى مهمّات على, بـ فرنسية بولندا، لها. لمّ ان قامت تعديل المدن, ٣٠ لمحاكم المعاهدات إيو. كثيرة أدوات ويكيبيديا و بها, أم جدول العصبة بحث. أساسي معارضة بـ هذه, شيء مسرح واتّجه الشّعبين ٣٠. بينما واحدة إذ لمّ.</p>
+        <p>علاقة الشمال والفرنسي لها أن. المحيط الشهيرة البولندي دون أي, لم على مليون الثالث، بالسيطرة, نفس ان واحدة المجتمع والكوري. أي أثره، الأمم دار, مع وسفن وقام سكان انه. كان بهيئة الإمداد هو, بينما تطوير يعادل هذه بل, قد خيار يقوم أعلنت بلا. ما مسرح ٢٠٠٤ عدم, حصدت الصفحة المؤلّفة أخذ هو. هذا عل الدول الفرنسية, معقل مهمّات إذ مدن. تجهيز ألمانيا دار بل.</p>
+        <p>لان تم بسبب مئات الفترة. جهة تنفّس المشترك ٣٠, وباءت اوروبا دنو لم, أم جعل كرسي إختار وبريطانيا. مما رئيس الله الأثناء، ٣٠, الأمم الشتاء البولندي بين في, دول ان حلّت الأوروبيّون. بوابة العصبة البرية هو تحت, أضف أم الجوي أراضي, مدن العظمى قُدُماً ايطاليا، هو. حدى ثم تنفّس كنقطة, أن أما اعتداء واُسدل بالجانب.</p>
+        <p>انتهت اكتوبر واندونيسيا، حين بـ. غير بالرغم التقليدي في, و أما بزمام ا لإنعدام. هو كُلفة وانتهاءً حول. جُل مكّن الصين ان, ترتيب الأجل أوراقهم لها كل.</p>
+        <p>هذا وبعض قِبل من, هو ميناء فهرست قبضتهم يبق. كانت لهيمنة للإتحاد على إذ, بحشد مسرح بها أن. قد ومن الأوضاع اليابان للإتحاد, و قررت المارق عرض, أواخر محاولات بها قد. مايو لهيمنة بريطانيا مدن بل.</p>
+        <p>وفي الثالث، الإثنان من, أم وعلى مهمّات على, بـ فرنسية بولندا، لها. لمّ ان قامت تعديل المدن, ٣٠ لمحاكم المعاهدات إيو. كثيرة أدوات ويكيبيديا و بها, أم جدول العصبة بحث. أساسي معارضة بـ هذه, شيء مسرح واتّجه الشّعبين ٣٠. بينما واحدة إذ لمّ.</p>
+        <p>علاقة الشمال والفرنسي لها أن. المحيط الشهيرة البولندي دون أي, لم على مليون الثالث، بالسيطرة, نفس ان واحدة المجتمع والكوري. أي أثره، الأمم دار, مع وسفن وقام سكان انه. كان بهيئة الإمداد هو, بينما تطوير يعادل هذه بل, قد خيار يقوم أعلنت بلا. ما مسرح ٢٠٠٤ عدم, حصدت الصفحة المؤلّفة أخذ هو. هذا عل الدول الفرنسية, معقل مهمّات إذ مدن. تجهيز ألمانيا دار بل.</p>
+        <p>لان تم بسبب مئات الفترة. جهة تنفّس المشترك ٣٠, وباءت اوروبا دنو لم, أم جعل كرسي إختار وبريطانيا. مما رئيس الله الأثناء، ٣٠, الأمم الشتاء البولندي بين في, دول ان حلّت الأوروبيّون. بوابة العصبة البرية هو تحت, أضف أم الجوي أراضي, مدن العظمى قُدُماً ايطاليا، هو. حدى ثم تنفّس كنقطة, أن أما اعتداء واُسدل بالجانب.</p>
+        <p>انتهت اكتوبر واندونيسيا، حين بـ. غير بالرغم التقليدي في, و أما بزمام ا لإنعدام. هو كُلفة وانتهاءً حول. جُل مكّن الصين ان, ترتيب الأجل أوراقهم لها كل.</p>
+        <p>هذا وبعض قِبل من, هو ميناء فهرست قبضتهم يبق. كانت لهيمنة للإتحاد على إذ, بحشد مسرح بها أن. قد ومن الأوضاع اليابان للإتحاد, و قررت المارق عرض, أواخر محاولات بها قد. مايو لهيمنة بريطانيا مدن بل.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">قريب</button>
       </div>
     </div>
   </div>

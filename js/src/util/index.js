@@ -180,6 +180,8 @@ const getjQuery = () => {
   return null
 }
 
+const isRTL = document.documentElement.dir === 'rtl'
+
 const onDOMContentLoaded = callback => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', callback)
@@ -203,5 +205,6 @@ export {
   noop,
   reflow,
   getjQuery,
-  onDOMContentLoaded
+  onDOMContentLoaded,
+  isRTL
 }
