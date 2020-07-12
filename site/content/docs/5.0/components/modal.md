@@ -186,7 +186,6 @@ When backdrop is set to static, the modal will not close when clicking outside i
 </div>
 ```
 
-
 ### Scrolling long content
 
 When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
@@ -346,6 +345,105 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   ...
 </div>
 ```
+
+## Sidebar modals
+
+Convert modals into offcanvas sidebar components with the addition of `.modal-left` or `.modal-right`. These classes override the modal's default position, sizing, and transitions to make them appear as offcanvas drawers for content, shopping carts, navigation, and more.
+
+With these two demos, we've removed our optional `.modal-footer`s, but you can add them back. You can also add any custom content within the modal, or change the default appearance, as you need.
+
+### Left modal
+
+Our first demo is for `.modal-left`, which also has a vertical `.nav-pills` component in it.
+
+<div class="modal modal-left fade" id="exampleModalLeft" tabindex="-1" aria-labelledby="exampleModalLeftLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLeftLabel">Modal left</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLeft">
+    Launch left modal
+  </button>
+</div>
+
+{{< highlight html >}}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLeft">
+  Launch left modal
+</button>
+<div class="modal modal-left fade" id="exampleModalLeft" tabindex="-1" aria-labelledby="exampleModalLeftLabel" aria-hidden="true">
+  ...
+</div>
+{{< /highlight >}}
+
+### Right modal
+
+In this `.modal-right` example, we've removed the default `.modal-body` padding with `.p-0` and added a linked list group within.
+
+<div class="modal modal-right fade" id="exampleModalRight" tabindex="-1" aria-labelledby="exampleModalRightLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalRightLabel">Modal right</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            Cras justo odio
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+          <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalRight">
+    Launch right modal
+  </button>
+</div>
+
+{{< highlight html >}}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalRight">
+  Launch right modal
+</button>
+<div class="modal modal-right fade" id="exampleModalRight" tabindex="-1" aria-labelledby="exampleModalRightLabel" aria-hidden="true">
+  ...
+</div>
+{{< /highlight >}}
+
+## Working with modals
 
 ### Tooltips and popovers
 
