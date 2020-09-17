@@ -255,10 +255,22 @@
     overflow-y: auto;
   }
 
-  &.modal.show {
+  &.modal.fade {
     .modal-dialog {
       transform: translateX(0);
     }
+  }
+  &.modal.show {
+    .modal-dialog {
+      transform: none;
+    }
+  }
+}
+
+.modal.modal-left {
+  .modal-dialog {
+    margin-right: auto;
+    transform: translateX(-100%);
   }
 }
 
@@ -267,23 +279,4 @@
     margin-left: auto;
     transform: translateX(100%);
   }
-
-  // &.show {
-  //   .modal-dialog {
-  //     transform: translateX(0);
-  //   }
-  // }
-}
-
-.modal.modal-left {
-  .modal-dialog {
-    margin-right: auto;
-    transform: translateX(-100%);
-  }
-
-  // &.show {
-  //   .modal-dialog {
-  //     transform: translateX(0);
-  //   }
-  // }
 }
