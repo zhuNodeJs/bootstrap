@@ -277,17 +277,20 @@ class Dropdown {
     const parentDropdown = this._element.parentNode
     let placement = PLACEMENT_BOTTOM
 
-    // Handle dropup
-    if (hasClass(parentDropdown, CLASS_NAME_DROPUP)) {
-      placement = hasClass(this._menu, CLASS_NAME_MENURIGHT) ?
-        PLACEMENT_TOPEND :
-        PLACEMENT_TOP
-    } else if (hasClass(parentDropdown, CLASS_NAME_DROPRIGHT)) {
-      placement = PLACEMENT_RIGHT
-    } else if (hasClass(parentDropdown, CLASS_NAME_DROPLEFT)) {
-      placement = PLACEMENT_LEFT
-    } else if (hasClass(this._menu, CLASS_NAME_MENURIGHT)) {
-      placement = PLACEMENT_BOTTOMEND
+    switch (parentDropdown) {
+      case hasClass(parentDropdown, CLASS_NAME_DROPUP):
+        placement = hasClass(this._menu, CLASS_NAME_MENURIGHT) ? PLACEMENT_TOPEND : PLACEMENT_TOP
+        break
+      case hasClass(parentDropdown, CLASS_NAME_DROPRIGHT):
+        placement = PLACEMENT_RIGHT
+        break
+      case hasClass(parentDropdown, CLASS_NAME_DROPLEFT):
+        placement = PLACEMENT_LEFT
+        break
+      case hasClass(parentDropdown, CLASS_NAME_MENURIGHT):
+        placement = PLACEMENT_BOTTOMEND
+        break
+      default:
     }
 
     return placement
