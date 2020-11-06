@@ -51,11 +51,11 @@ $utilities: map-merge(
       property: bottom,
       values: $position-values
     ),
-    "left": (
+    "start": (
       property: left,
       values: $position-values
     ),
-    "right": (
+    "end": (
       property: right,
       values: $position-values
     ),

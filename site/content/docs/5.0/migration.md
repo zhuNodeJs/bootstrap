@@ -24,6 +24,7 @@ Horizontal direction sensitive variables, utilities and mixins are renamed with 
 <details>
 <summary class="font-weight-bold">Utilities</summary>
 
+- Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`,
 - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`,
 - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`,
 - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`,
