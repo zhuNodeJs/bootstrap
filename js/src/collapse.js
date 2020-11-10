@@ -137,7 +137,7 @@ class Collapse {
       actives = SelectorEngine.find(SELECTOR_ACTIVES, this._parent)
         .filter(elem => {
           if (typeof this._config.parent === 'string') {
-            return elem.getAttribute('data-parent') === this._config.parent
+            return elem.dataset.parent === this._config.parent
           }
 
           return elem.classList.contains(CLASS_NAME_COLLAPSE)

@@ -443,7 +443,7 @@ class Tooltip {
   }
 
   getTitle() {
-    let title = this.element.getAttribute('data-original-title')
+    let title = this.element.dataset.originalTitle
 
     if (!title) {
       title = typeof this.config.title === 'function' ?
@@ -578,14 +578,11 @@ class Tooltip {
   }
 
   _fixTitle() {
-    const titleType = typeof this.element.getAttribute('data-original-title')
+    const titleAttribute = this.element.getAttribute('title')
+    const titleIsString = typeof this.element.dataset.originalTitle === 'string'
 
-    if (this.element.getAttribute('title') || titleType !== 'string') {
-      this.element.setAttribute(
-        'data-original-title',
-        this.element.getAttribute('title') || ''
-      )
-
+    if (titleAttribute || !titleIsString) {
+      this.element.dataset.originalTitle = titleAttribute || ''
       this.element.setAttribute('title', '')
     }
   }

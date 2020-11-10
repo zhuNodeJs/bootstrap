@@ -33,7 +33,7 @@ const getUID = prefix => {
 }
 
 const getSelector = element => {
-  let selector = element.getAttribute('data-target')
+  let selector = element.dataset.target
 
   if (!selector || selector === '#') {
     const hrefAttr = element.getAttribute('href')

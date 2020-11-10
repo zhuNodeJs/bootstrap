@@ -419,7 +419,7 @@ class Carousel {
       return
     }
 
-    const elementInterval = Number.parseInt(element.getAttribute('data-interval'), 10)
+    const elementInterval = Number.parseInt(element.dataset.interval, 10)
 
     if (elementInterval) {
       this._config.defaultInterval = this._config.defaultInterval || this._config.interval
@@ -576,7 +576,7 @@ class Carousel {
       ...Manipulator.getDataAttributes(target),
       ...Manipulator.getDataAttributes(this)
     }
-    const slideIndex = this.getAttribute('data-slide-to')
+    const slideIndex = this.dataset.slideTo
 
     if (slideIndex) {
       config.interval = false

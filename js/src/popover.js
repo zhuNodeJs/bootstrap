@@ -123,8 +123,7 @@ class Popover extends Tooltip {
   }
 
   _getContent() {
-    return this.element.getAttribute('data-content') ||
-      this.config.content
+    return this.element.dataset.content || this.config.content
   }
 
   _cleanTipClass() {
