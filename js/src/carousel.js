@@ -314,18 +314,20 @@ class Carousel {
       }
     }
 
+    const $element = $(this._element)
+
     $(this._element.querySelectorAll(SELECTOR_ITEM_IMG))
       .on(EVENT_DRAG_START, e => e.preventDefault())
 
     if (this._pointerEvent) {
-      $(this._element).on(EVENT_POINTERDOWN, event => start(event))
-      $(this._element).on(EVENT_POINTERUP, event => end(event))
+      $element.on(EVENT_POINTERDOWN, event => start(event))
+      $element.on(EVENT_POINTERUP, event => end(event))
 
       this._element.classList.add(CLASS_NAME_POINTER_EVENT)
     } else {
-      $(this._element).on(EVENT_TOUCHSTART, event => start(event))
-      $(this._element).on(EVENT_TOUCHMOVE, event => move(event))
-      $(this._element).on(EVENT_TOUCHEND, event => end(event))
+      $element.on(EVENT_TOUCHSTART, event => start(event))
+      $element.on(EVENT_TOUCHMOVE, event => move(event))
+      $element.on(EVENT_TOUCHEND, event => end(event))
     }
   }
 
