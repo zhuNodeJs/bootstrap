@@ -9,6 +9,10 @@ toc: true
 
 ## v5.0.0-alpha3
 
+### Browser support
+
+- Dropped support for Microsoft Edge Legacy. See [here](#browser-support-1) for the previous browser support changes.
+
 ### Colors
 
 - The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system.
@@ -20,6 +24,10 @@ toc: true
 ### Reboot
 
 - Introduce `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
+
+### Buttons
+
+- [**Dropped `.btn-block` in favor of CSS grid utility classes.**]({{< docsref "/components/buttons#block-buttons" >}}) Instead of applying `.btn-block` to individual buttons, a group of buttons now get wrapped in a parent `.d-grid` class and can use `.gap-*` utilities for spacing.
 
 ### Forms
 
@@ -34,6 +42,8 @@ toc: true
   - Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
   - Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
   - Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- Added `.d-grid` to display utilities
+- Added new `gap` utilities (`.gap`) for CSS Grid layouts
 
 ## v5.0.0-alpha2
 
