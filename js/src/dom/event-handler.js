@@ -1,12 +1,11 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-alpha2): dom/event-handler.js
+ * Bootstrap (v5.0.0-alpha3): dom/event-handler.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import { getjQuery } from '../util/index'
-import { defaultPreventedPreservedOnDispatch } from './polyfill'
 
 /**
  * ------------------------------------------------------------------------
@@ -314,12 +313,6 @@ const EventHandler = {
 
     if (defaultPrevented) {
       evt.preventDefault()
-
-      if (!defaultPreventedPreservedOnDispatch) {
-        Object.defineProperty(evt, 'defaultPrevented', {
-          get: () => true
-        })
-      }
     }
 
     if (nativeDispatch) {

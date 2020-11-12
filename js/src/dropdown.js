@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-alpha2): dropdown.js
+ * Bootstrap (v5.0.0-alpha3): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -27,7 +27,7 @@ import SelectorEngine from './dom/selector-engine'
  */
 
 const NAME = 'dropdown'
-const VERSION = '5.0.0-alpha2'
+const VERSION = '5.0.0-alpha3'
 const DATA_KEY = 'bs.dropdown'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
@@ -278,10 +278,9 @@ class Dropdown {
 
     // Handle dropup
     if (parentDropdown.classList.contains(CLASS_NAME_DROPUP)) {
-      placement = PLACEMENT_TOP
-      if (this._menu.classList.contains(CLASS_NAME_MENURIGHT)) {
-        placement = PLACEMENT_TOPEND
-      }
+      placement = this._menu.classList.contains(CLASS_NAME_MENURIGHT) ?
+        PLACEMENT_TOPEND :
+        PLACEMENT_TOP
     } else if (parentDropdown.classList.contains(CLASS_NAME_DROPRIGHT)) {
       placement = PLACEMENT_RIGHT
     } else if (parentDropdown.classList.contains(CLASS_NAME_DROPLEFT)) {
