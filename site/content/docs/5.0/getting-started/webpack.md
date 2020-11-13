@@ -23,7 +23,7 @@ Alternatively, if you only need just a few of our plugins, you may **import plug
 
 ```js
 import Alert from 'bootstrap/js/dist/alert';
-...
+// ...
 ```
 
 Bootstrap depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property.
